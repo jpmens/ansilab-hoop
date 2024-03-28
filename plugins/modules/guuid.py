@@ -28,7 +28,7 @@ attributes:
 '''
 
 from ansible.module_utils.basic import AnsibleModule
-import uuid, re, os
+import uuid, re, os, socket
 
 def main():
     module = AnsibleModule(
@@ -70,7 +70,7 @@ def main():
         msg = "Cannot access {0}: {1}".format(path, e)
         module.fail_json(dict(msg=msg))
 
-    result = dict(changed=changed, uuid=u, upper=upper)
+    result = dict(changed=changed, uuid=u, upper=upper, hostname=socket.gethostname())
     module.exit_json(**result)
 
 if __name__ == '__main__':
