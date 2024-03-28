@@ -18,6 +18,13 @@ options:
         required: false
         default: false
         type: bool
+
+author:
+    - JP Mens
+
+attributes:
+  check_mode:
+    support: full
 '''
 
 from ansible.module_utils.basic import AnsibleModule

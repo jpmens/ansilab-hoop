@@ -1,19 +1,18 @@
 namespace: ansilab
 name: hoop
-version: 1.0.0
+version: 1.0.1
 authors:
 - Jan-Piet Mens <jp@mens.de> (https://jpmens.net)
 description: >
   This is an demonstration collection for my Ansible trainings, and it's called
-  _hoop_ because the EE is called _wheel_. (Nobody is assumed to understand
-  that. ;-)
+  hoop because the EE is called wheel. (Nobody is assumed to understand that. ;-)
 license:
 - GPL-2.0-or-later
 tags: [ ansilab, demo, example, testing ]
 dependencies: {}
 repository: https://github.com/jpmens/ansilab-hoop
-documentation: https://github.com/jpmens/ansilab-hoop/README.md
-readme: https://github.com/jpmens/ansilab-hoop/README.md
+# documentation: https://github.com/jpmens/ansilab-hoop/README.md
+readme: README.md
 homepage: https://github.com/jpmens/ansilab-hoop
 issues: https://github.com/jpmens/ansilab-hoop/issues
 
@@ -23,6 +22,8 @@ issues: https://github.com/jpmens/ansilab-hoop/issues
 # and '.git' are always filtered. Mutually exclusive with 'manifest'
 build_ignore: 
   - _jp_upload.sh
+  - env.v3
+  - plugins/filter  # FIXME: documentaton missing
 
 # A dict controlling use of manifest directives used in building the collection artifact. The key 'directives' is a
 # list of MANIFEST.in style
